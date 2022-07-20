@@ -56,13 +56,13 @@ export const DelBlog = ({ BlogId, setBlogId, Name }) => {
 
     return (
         <div>
-            {Name && <div className="container shadow my-5">
+            {Name && <div className="container row shadow my-5">
                 <div className="col-md-5 d-flex flex-column align-items-center form">
                     <h1 className="display-4 fw-bolder my-5"> Are you sure you want to delete this blog?</h1>
                     
                 </div>
                 <div className="col-md-6 p-5">
-                    <h1 className="display-6 fw-bolder mb-5">Delete the blog</h1>
+                    <h1 className="display-6 fw-bolder text-danger text-center mb-5">Delete the blog</h1>
                     <p className="lead text-center mt-3">Enter Your Password To Delete the blog and Press Confirm</p>
                     <form action=""  >
                         <div className="mb-3">

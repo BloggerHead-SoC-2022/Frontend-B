@@ -59,9 +59,9 @@ export const Signup =()=>{
     return (
         <div className=" card p-5 mx-5  my-5 text-muted ">
 
-            <form action="" onSubmit={handleSubmit}>
+            <div className="text-center h1 text-info bg-light">Register yourself here</div>
 
-             <label htmlFor="fn" id="fn" className="text-danger"></label> {/*error message displayed here */}
+            <form action="" onSubmit={handleSubmit}>
 
                 <div >
                     <label htmlFor="firstName">First Name</label>
@@ -98,6 +98,8 @@ export const Signup =()=>{
                     <input className=" form-control col-md-8 text-dark" type="password"  id="confirmPassword" value={userDetail.confirmPassword} 
                     onChange={handleInput} autoComplete="off" ></input>
                 </div>
+
+                <label htmlFor="fn" id="fn" className="text-danger"></label> {/*error message displayed here */}
 
                 
                 <button  type="submit" className="btn btn-dark text-light my-3">Submit</button> 

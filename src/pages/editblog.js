@@ -54,7 +54,7 @@ export const EditBlog =({jwt_token, BlogId, setBlogId})=>{
             },3000);  
         }
         if(response.status===200){
-            document.querySelector('#fn').innerHTML = "successsfully posted";
+            document.querySelector('#fn').innerHTML = "Successsfully edited";
             document.querySelector('#fn').className="text-success";
             setBlogId("")
            
@@ -71,7 +71,7 @@ export const EditBlog =({jwt_token, BlogId, setBlogId})=>{
                 </h1>
             </div>
             {jwt_token==null && <div>
-                 to create your bllog , <Link to="/login">Login</Link> first    
+                 to create your blog , <Link to="/login">Login</Link> first    
             </div>}
             {jwt_token!=null && <form onSubmit={handleSubmit}>
 
@@ -84,9 +84,9 @@ export const EditBlog =({jwt_token, BlogId, setBlogId})=>{
                 </div>
 
                 <div>
-                    <label htmlFor="content">Desccription</label>
-                    <input className=" form-control text-dark py-5 px-2 " type="text"  id="content" value={myblog.content} 
-                    onChange={handleInput} autoComplete="off" ></input>
+                    <label htmlFor="content">Description</label>
+                    <textarea className=" form-control text-dark " rows="5" style={{resize:"none"}} type="text"  id="content" value={myblog.content} 
+                    onChange={handleInput} autoComplete="off" ></textarea>
                 </div>
 
                 <div >

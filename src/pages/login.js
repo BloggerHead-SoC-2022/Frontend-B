@@ -23,7 +23,7 @@ export const Login = ({ setToken ,setName}) => {
     const handleSubmit = async(e) =>{
         e.preventDefault();
 
-        const newUser ={...user, id : new Date().getTime().toString() }     // why used id here?
+        const newUser ={...user }   
 
         var response = await fetch("http://localhost:8000/users/signin", {
         method: "POST",

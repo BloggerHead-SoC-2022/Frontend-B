@@ -20,7 +20,7 @@ export const Create =({jwt_token, Name})=>{
     const handleSubmit = async(e) =>{
         e.preventDefault();
 
-        const blog ={...myblog, id : new Date().getTime().toString() }
+        const blog ={...myblog}
 
         var response = await fetch("http://localhost:8000/blogs/", {
         method: "POST",
@@ -43,7 +43,7 @@ export const Create =({jwt_token, Name})=>{
             },3000);  
         }
         if(response.status===200){
-            document.querySelector('#fn').innerHTML = "successsfully posted";
+            document.querySelector('#fn').innerHTML = "Successsfully posted";
             document.querySelector('#fn').className="text-success";
             setTimeout(function(){
                 document.querySelector('#fn').style.display = 'none'
@@ -79,9 +79,9 @@ export const Create =({jwt_token, Name})=>{
                 </div>
 
                 <div>
-                    <label htmlFor="content">Desccription</label>
-                    <input className=" form-control text-dark py-5 px-2 " type="text"  id="content" value={myblog.content} 
-                    onChange={handleInput} autoComplete="off" ></input>
+                    <label htmlFor="content">Description</label>
+                    <textarea className=" form-control text-dark " rows="5" style={{resize:"none"}} type="text"  id="content" value={myblog.content} 
+                    onChange={handleInput} autoComplete="off" ></textarea>
                 </div>
 
                 <div >

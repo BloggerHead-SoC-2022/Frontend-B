@@ -38,7 +38,7 @@ export const Home =({ jwt_token, setDisp, setBlogId, setPage })=>{
                 <div className="carousel-inner my-3 ">
                     <div className="carousel-item active">
                         <h1 className="text-light p-5  mx-auto text-center ">
-                            Welcome to the BloggerHead Website!
+                            Welcome to the Blogger<span className="text-info">Head</span> Website!
                         </h1>
                     </div>
                     <div className="carousel-item ">
